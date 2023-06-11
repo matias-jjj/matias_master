@@ -50,7 +50,7 @@ if selected_model in ["byt5", "alle"]:
     tokenizer = AutoTokenizer.from_pretrained(model_address, model_max_length=512)
     model_itself = AutoModelForSeq2SeqLM.from_pretrained(model_address)
     gen_max_length = 250
-    model = {"name":"nort5", "mod":model_itself, "tok":tokenizer, "gml":gen_max_length}
+    model = {"name":"byt5", "mod":model_itself, "tok":tokenizer, "gml":gen_max_length}
     all_models.append(model)
 if selected_model in ["mt5", "alle"]:
     print("Laster inn norgec_mt5")
@@ -58,7 +58,7 @@ if selected_model in ["mt5", "alle"]:
     tokenizer = AutoTokenizer.from_pretrained(model_address, model_max_length=512)
     model_itself = AutoModelForSeq2SeqLM.from_pretrained(model_address)
     gen_max_length = 50
-    model = {"name":"byt5", "mod":model_itself, "tok":tokenizer, "gml":gen_max_length}
+    model = {"name":"mt5", "mod":model_itself, "tok":tokenizer, "gml":gen_max_length}
     all_models.append(model)
 
 # start collecting input from the user and generate
